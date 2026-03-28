@@ -68,7 +68,9 @@ public class InvoiceService {
         Invoice existing = invoiceRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Invoice not found"));
         
-        existing.setInvoiceNumber(invoice.getInvoiceNumber());
+        if (invoice.getInvoiceNumber() != null && !invoice.getInvoiceNumber().isEmpty()) {
+            existing.setInvoiceNumber(invoice.getInvoiceNumber());
+        }
         existing.setInvoiceDate(invoice.getInvoiceDate());
         existing.setDueDate(invoice.getDueDate());
         existing.setStatus(invoice.getStatus());
