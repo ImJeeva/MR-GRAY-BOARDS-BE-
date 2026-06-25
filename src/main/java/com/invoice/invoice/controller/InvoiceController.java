@@ -35,10 +35,10 @@ public class InvoiceController {
         if (request.containsKey("invoiceNumber")) {
             invoice.setInvoiceNumber((String) request.get("invoiceNumber"));
         }
-        if (request.containsKey("invoiceDate")) {
+        if (request.containsKey("invoiceDate") && request.get("invoiceDate") != null && !((String) request.get("invoiceDate")).isEmpty()) {
             invoice.setInvoiceDate(java.time.LocalDate.parse((String) request.get("invoiceDate")));
         }
-        if (request.containsKey("dueDate")) {
+        if (request.containsKey("dueDate") && request.get("dueDate") != null && !((String) request.get("dueDate")).isEmpty()) {
             invoice.setDueDate(java.time.LocalDate.parse((String) request.get("dueDate")));
         }
         if (request.containsKey("status")) {
