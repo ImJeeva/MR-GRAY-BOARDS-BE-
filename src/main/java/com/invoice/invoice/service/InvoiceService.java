@@ -109,7 +109,7 @@ public class InvoiceService {
     
     private String generateInvoiceNumber() {
         long count = invoiceRepository.count() + 1;
-        return "INV-" + String.format("%04d", count);
+        return String.format("%03d", count);
     }
     
     private void calculateTotals(Invoice invoice) {
