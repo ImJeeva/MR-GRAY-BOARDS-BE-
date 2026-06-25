@@ -40,6 +40,8 @@ public class CompanyService {
         existing.setCountry(company.getCountry());
         existing.setTaxNumber(company.getTaxNumber());
         existing.setLogoUrl(company.getLogoUrl());
+        existing.setGstin(company.getGstin());
+        existing.setPlaceOfSupply(company.getPlaceOfSupply());
         return companyRepository.save(existing);
     }
     

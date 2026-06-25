@@ -108,9 +108,8 @@ public class InvoiceService {
     }
     
     private String generateInvoiceNumber() {
-        String date = LocalDate.now().format(DateTimeFormatter.ofPattern("yyyyMMdd"));
         long count = invoiceRepository.count() + 1;
-        return "INV-" + date + "-" + String.format("%04d", count);
+        return "INV-" + String.format("%04d", count);
     }
     
     private void calculateTotals(Invoice invoice) {
