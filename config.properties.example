@@ -1,0 +1,12 @@
+# ============================================
+#   M.R.GRAY BOARDS - Database Configuration
+#   Copy this file to "config.properties" and
+#   fill in the real values. Do NOT commit the
+#   real config.properties to git.
+# ============================================
+
+DB_HOST=localhost
+DB_PORT=3306
+DB_NAME=invoice_db
+DB_USERNAME=root
+DB_PASSWORD=changeme

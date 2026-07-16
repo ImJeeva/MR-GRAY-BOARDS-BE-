@@ -38,6 +38,8 @@ public class ClientService {
         existing.setState(client.getState());
         existing.setZipCode(client.getZipCode());
         existing.setCountry(client.getCountry());
+        existing.setGstin(client.getGstin());
+        existing.setPlaceOfSupply(client.getPlaceOfSupply());
         return clientRepository.save(existing);
     }
     
