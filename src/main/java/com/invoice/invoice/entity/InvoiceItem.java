@@ -12,7 +12,8 @@ public class InvoiceItem {
     
     private String description;
     private String hsnCode;
-    private Integer quantity;
+    private String uom;
+    private Double quantity;
     private Double unitPrice;
     private Double amount;
     private Double taxableValue;
@@ -39,8 +40,11 @@ public class InvoiceItem {
     public String getHsnCode() { return hsnCode; }
     public void setHsnCode(String hsnCode) { this.hsnCode = hsnCode; }
     
-    public Integer getQuantity() { return quantity; }
-    public void setQuantity(Integer quantity) { this.quantity = quantity; }
+    public String getUom() { return uom; }
+    public void setUom(String uom) { this.uom = uom; }
+
+    public Double getQuantity() { return quantity; }
+    public void setQuantity(Double quantity) { this.quantity = quantity; }
     
     public Double getUnitPrice() { return unitPrice; }
     public void setUnitPrice(Double unitPrice) { this.unitPrice = unitPrice; }

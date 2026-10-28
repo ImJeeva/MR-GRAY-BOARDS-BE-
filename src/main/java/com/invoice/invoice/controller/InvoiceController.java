@@ -72,7 +72,10 @@ public class InvoiceController {
                 if (itemData.containsKey("hsnCode")) {
                     item.setHsnCode((String) itemData.get("hsnCode"));
                 }
-                item.setQuantity(((Number) itemData.get("quantity")).intValue());
+                if (itemData.containsKey("uom")) {
+                    item.setUom((String) itemData.get("uom"));
+                }
+                item.setQuantity(((Number) itemData.get("quantity")).doubleValue());
                 item.setUnitPrice(((Number) itemData.get("unitPrice")).doubleValue());
                 item.setAmount(((Number) itemData.get("amount")).doubleValue());
                 
